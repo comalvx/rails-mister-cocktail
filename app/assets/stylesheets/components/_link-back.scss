@@ -1,0 +1,12 @@
+.link-back {
+  color: black;
+  margin-top: 20px;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 0;
+  &:hover {
+    text-decoration: none;
+    opacity: 1;
+    color: black;
+  }
+}

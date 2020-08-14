@@ -32,3 +32,29 @@ h1 {
   margin-bottom: 20px;
   margin-top: 20px;
 }
+
+.cocktail-info {
+  display: flex;
+}
+
+.ingredients {
+  margin: 95px 0 0 15px;
+}
+
+.title h1 {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  border-bottom: 1px grey solid;
+}
+
+h2 {
+  margin-top: 25px;
+}
+
+form {
+  width: 450px;
+}
+
+.create-cocktail {
+  border-bottom: 2px solid black;
+}

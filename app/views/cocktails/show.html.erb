@@ -1,17 +1,28 @@
-<h1><%= @cocktail.name %></h1>
-<%= cl_image_tag @cocktail.photo.key, height: 400, width: 400 %>
+<div class="container">
+  <%= link_to '<< Cocktails list', cocktails_path, class: "link-back" %>
+  <div class="cocktail-info">
+    <div class="title">
+      <h1><%= @cocktail.name %></h1>
+      <%= cl_image_tag @cocktail.photo.key, height: 400, width: 400 %>
+    </div>
 
-<% @cocktail.doses.each do |dose| %>
-  <p>Dose : <%= dose.description %></p>
-  <p>Ingrédient : <%= dose.ingredient.name %><%= link_to "Delete", dose_path(dose),
-      method: :delete, data: { confirm: "Are you sure?" }
-    %></p>
-<% end %>
+    <div class="ingredients">
+      <% @cocktail.doses.each do |dose| %>
+        <p>Ingrédient : <%= dose.ingredient.name %> <%= link_to dose_path(dose),
+            method: :delete, data: { confirm: "Are you sure?" } do %>
+            <i class="fas fa-trash-alt"></i>
+            <% end %>
+          </p>
+          <p>Dose : <%= dose.description %></p>
+      <% end %>
+    </div>
+  </div>
 
-<%= simple_form_for([@cocktail, @dose]) do |f| %>
-    <%= f.input :description %>
-    <%= f.association :ingredient %>
-    <%= f.submit %>
-<% end %>
+  <h2>Add a new ingredient</h2>
 
-<%= link_to 'Cocktails list', cocktails_path %>
+  <%= simple_form_for([@cocktail, @dose]) do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit class: "btn btn-primary" %>
+  <% end %>
+</div>
