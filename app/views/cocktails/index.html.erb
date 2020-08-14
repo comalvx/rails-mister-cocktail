@@ -7,7 +7,7 @@
   <div class="wrapper">
     <% @cocktails.each do |cocktail| %>
     <div class="card-info">
-      <img src="https://source.unsplash.com/random?#{n}">
+      <img src="https://source.unsplash.com/1600x900/?cocktail">
       <div class="display-cocktail">
         <%= link_to cocktail.name, cocktail_path(cocktail) %>
         <p>
