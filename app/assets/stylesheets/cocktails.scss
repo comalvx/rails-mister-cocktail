@@ -1,15 +1,18 @@
-// Place all the styles related to the cocktails controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+// // Place all the styles related to the cocktails controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: https://sass-lang.com/
 
-h1 {
-  margin-top: 20px;
-}
+// h1 {
+//   margin-top: 20px;
+// }
 
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  width: 100%;
+  margin-left: 450px;
+  overflow: hidden;
   img {
   width: 100%;
   object-fit: cover;
@@ -28,10 +31,10 @@ h1 {
   border-radius: 5px;
 }
 
-.container > a {
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
+// .container > a {
+//   margin-bottom: 20px;
+//   margin-top: 20px;
+// }
 
 .cocktail-info {
   display: flex;
@@ -41,20 +44,42 @@ h1 {
   margin: 95px 0 0 15px;
 }
 
-.title h1 {
-  margin-top: 10px;
-  margin-bottom: 25px;
-  border-bottom: 1px grey solid;
-}
+// .title h1 {
+//   margin-top: 10px;
+//   margin-bottom: 25px;
+//   border-bottom: 1px grey solid;
+// }
 
-h2 {
-  margin-top: 25px;
-}
+// h2 {
+//   margin-top: 25px;
+// }
 
-form {
+// form {
+//   width: 450px;
+// }
+
+// .create-cocktail {
+//   border-bottom: 2px solid black;
+// }
+
+.intro {
   width: 450px;
+  height: 100vh;
+  background-color: yellow;
+  text-align: center;
+  padding-top: 200px;
+  overflow: hidden;
+  position: fixed;
 }
 
-.create-cocktail {
-  border-bottom: 2px solid black;
+.bar-baseline {
+}
+
+.container-bar {
+  display: flex;
+  position: absolute;
+}
+
+.parent {
+  position: relative;
 }

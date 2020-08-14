@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
 
   <h1>All cocktails</h1>
   <%= link_to 'Create cocktail', new_cocktail_path, class: "btn btn-primary" %>
@@ -19,4 +19,32 @@
     <% end %>
   </div>
 
+</div>
+ -->
+<div class="parent">
+  <div class="container-bar">
+    <div class="intro">
+      <div class="bar-baseline">
+        <h1>Le bar de Coco</h1>
+        <p>Viens boire un peu n'importe quoi</p>
+        <%= link_to 'Create cocktail', new_cocktail_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+
+      <div class="wrapper">
+        <% @cocktails.each do |cocktail| %>
+        <div class="card-info">
+            <%= cl_image_tag cocktail.photo.key if cocktail.photo.attached? %>
+          <div class="display-cocktail">
+            <%= link_to cocktail.name, cocktail_path(cocktail) %>
+            <p>
+            <% cocktail.ingredients.each do |ingredient| %>
+              <%= ingredient.name %>
+            <% end %>
+            </p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
 </div>
